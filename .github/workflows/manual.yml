@@ -89,9 +89,7 @@ jobs:
 
       - name: Run Playwright Tests
         run: |
-          pytest tests/ \
-            --browser ${{ matrix.browser }} \
-            --headed \
+          pytest tests
             -v \
             --html=report-${{ matrix.browser }}.html
 

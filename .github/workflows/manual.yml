@@ -91,7 +91,7 @@ jobs:
       - name: Run Playwright Tests
         run: |
           pytest
-            --html=report-${{ matrix.browser }}.html
+            --html=report.html
 
       # -------------------------------------------------
       # Upload reports if failed
@@ -103,6 +103,6 @@ jobs:
         with:
           name: playwright-report-${{ matrix.browser }}
           path: |
-            report-${{ matrix.browser }}.html
+            report.html
             test-results/
             *.png

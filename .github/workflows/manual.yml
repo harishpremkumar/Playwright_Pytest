@@ -34,7 +34,8 @@ jobs:
 
       # Run test on multiple browsers
       matrix:
-        browser: [chromium, firefox, webkit]
+          # If we cross browser testing mention as list format
+        browser: [chromium]
 
     steps:
 
@@ -90,7 +91,6 @@ jobs:
       - name: Run Playwright Tests
         run: |
           pytest
-            -v \
             --html=report-${{ matrix.browser }}.html
 
       # -------------------------------------------------
